@@ -95,9 +95,9 @@ namespace DietPortal.Controllers
             return ubl.AddUser(user);
         }
         
-        [HttpPost("/Group/{userInGroup}/{password?}")]
+        [HttpPost("/Group")]
 
-        public async Task<int> AddUserInGroup(UserInGroup userInGroup, string? password)
+        public async Task<int> AddUserInGroup([FromBody] UserInGroup userInGroup, [FromQuery] string? password = null)
         {
             return await uigbl.AddUserInGroup(userInGroup, password);
         }

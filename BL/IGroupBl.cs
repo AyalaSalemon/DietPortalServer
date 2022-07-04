@@ -11,6 +11,6 @@ namespace BL
         public Task<List<Group>> GetAllGroups();
         public  Task<int> AddGroup(Group g);
         public  Task<Group> UpdateGroup(Group g);
-       
+
     }
 }

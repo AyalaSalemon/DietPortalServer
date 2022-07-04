@@ -48,6 +48,7 @@ namespace DietPortal
             services.AddScoped<IPortalBl, PortalBl>();
             services.AddScoped<IWeightDl, WeightDl>();
             services.AddScoped<IWeightBl, WeightBl>();
+            services.AddScoped<IMailBl, MailBl>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

@@ -13,6 +13,7 @@ namespace BL
     {
         IWeightDl wdl;
         IUserBl ubl;
+        private ICacheProvider _cacheProvider;
         public WeightBl(IWeightDl wdl,IUserBl ubl)
         {
             this.wdl = wdl;
@@ -44,10 +45,8 @@ namespace BL
 
         }
         public async Task<KeyValuePair<List<int>, double?>> GetWeeklyGroupWinner(int id)
-        {           
-            //Dictionary<int, double?> users = new Dictionary<int, double?>(wdl.GetWeeklyWinnerGroup().Result);
+        {          
 
-           
             List<UserWithKg> users = await ubl.GetUsersWithKg(id);
             double? maxWeight = -100;
             users.ForEach(u => { if (u.Kg > maxWeight) maxWeight = u.Kg; });
