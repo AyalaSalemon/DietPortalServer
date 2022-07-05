@@ -278,7 +278,7 @@ namespace DL
 
             modelBuilder.Entity<UserInGroup>(entity =>
             {
-                entity.HasNoKey();
+                //entity.HasNoKey();
 
                 entity.ToTable("UserInGroup");
 

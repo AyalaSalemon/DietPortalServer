@@ -13,7 +13,7 @@ namespace BL
     {
         IWeightDl wdl;
         IUserBl ubl;
-        private ICacheProvider _cacheProvider;
+      //  private ICacheProvider _cacheProvider;
         public WeightBl(IWeightDl wdl,IUserBl ubl)
         {
             this.wdl = wdl;
