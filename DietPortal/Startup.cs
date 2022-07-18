@@ -22,6 +22,7 @@ namespace DietPortal
     public class Startup
     {
 
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -32,6 +33,7 @@ namespace DietPortal
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.AddDbContext<ProjectDBContext>(options => options.UseSqlServer(
                Configuration.GetConnectionString("OurDb")), ServiceLifetime.Scoped);
             services.AddAutoMapper(typeof(Startup));
@@ -72,6 +74,7 @@ namespace DietPortal
             app.UseHttpsRedirection();
 
             app.UseRouting();
+           
             app.UseResponseCaching();
 
             app.Use(async (context, next) =>

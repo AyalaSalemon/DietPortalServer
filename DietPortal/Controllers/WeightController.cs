@@ -31,7 +31,8 @@ namespace DietPortal.Controllers
      
         public async Task<KeyValuePair<List<int>, double?>> GetWeeklyWinnerGroup()
         {
-            return await wbl.GetWeeklyWinnerGroup();
+            KeyValuePair<List<int>, double?> l=await wbl.GetWeeklyWinnerGroup();
+            return l;
         }
         [HttpGet("WeeklyWinner")]
        

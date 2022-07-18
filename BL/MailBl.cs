@@ -12,11 +12,9 @@ namespace BL
     {
         public void SendEmail(string toAddress, string subject, string body)
         {
-
             MailMessage message = new MailMessage();
             message.From = new MailAddress("324857648@mby.co.il");
             message.To.Add(new MailAddress(toAddress));
-
             string mailbody = body;
             message.Subject = subject;
             message.Body = mailbody;

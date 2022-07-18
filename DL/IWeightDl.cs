@@ -11,6 +11,7 @@ namespace DL
         public  Task<Dictionary<int, double?>> GetWeeklyWinnerGroup();
         public  Task<Dictionary<int, double?>> GetWeeklyWinner();
         public  Task<Dictionary<int, double?>> GetWeeklyGroupWinner(int id);
+        public Task<Dictionary<int, double?>> GetGroupWinner(int id);
         public  Task<List<Weight>> GetProgress(int userId, int groupId);
        
     }
